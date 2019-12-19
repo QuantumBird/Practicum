@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.12)  19 DEC 2019 08:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.12)  19 DEC 2019 09:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -705,6 +705,32 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks25
 \verbatim@line=\toks26
 \verbatim@in@stream=\read2
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count278
+\float@exts=\toks27
+\float@box=\box57
+\@float@everytoks=\toks28
+\@floatcapt=\box58
+) (/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip57
+\subfigcapskip=\skip58
+\subfigcaptopadj=\dimen178
+\subfigbottomskip=\skip59
+\subfigcapmargin=\dimen179
+\subfiglabelskip=\skip60
+\c@subfigure=\count279
+\c@lofdepth=\count280
+\c@subtable=\count281
+\c@lotdepth=\count282
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip61
+\subfig@bottom=\skip62
 ) (/usr/share/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2015/04/18 4.8.4
 ) (/usr/share/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
@@ -719,101 +745,101 @@ LaTeX Warning: Unused global option(s):
 (/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux)
 \openout1 = `Template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 -- Lines per column: 43 (approximate, difference = 4.79846pt).
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 23.
+LaTeX Info: Redefining \selectfont on input line 25.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count278
-\scratchdimen=\dimen178
-\scratchbox=\box57
-\nofMPsegments=\count279
-\nofMParguments=\count280
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count281
-\MPscratchDim=\dimen179
-\MPnumerator=\count282
-\makeMPintoPDFobject=\count283
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count283
+\scratchdimen=\dimen180
+\scratchbox=\box59
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen181
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks30
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -847,454 +873,30 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for C70+song on input line 68.
+LaTeX Font Info:    Trying to load font information for C70+song on input line 70.
  (/usr/share/texmf-dist/tex/latex/cjk/texinput/UTF8/c70song.fd
 File: c70song.fd 2015/04/18 4.8.4
 )
 
 LaTeX Font Warning: Font shape `C70/song/bx/it' undefined
-(Font)              using `C70/song/bx/n' instead on input line 79.
+(Font)              using `C70/song/bx/n' instead on input line 81.
 
-Package CJKpunct Info: punctuation spaces for family 'song' do not exist. Use family 'def' instead. on input line 80.
+Package CJKpunct Info: punctuation spaces for family 'song' do not exist. Use family 'def' instead. on input line 82.
 
 LaTeX Font Warning: Font shape `C70/song/m/sc' undefined
-(Font)              using `C70/song/m/n' instead on input line 103.
+(Font)              using `C70/song/m/n' instead on input line 105.
 
 
 LaTeX Font Warning: Font shape `C70/song/m/it' undefined
-(Font)              using `C70/song/m/n' instead on input line 108.
+(Font)              using `C70/song/m/n' instead on input line 110.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 127.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 127.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-[]$\OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ^^Vf$\C70/song/m/it/10/75 5 \C70/song/m/n/10/5b �\OT1/ptm/m/n/10 2\C70/song/m/it/10/4e *|\C70/song/m/n/10/ff ^^L| $\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 
-$\C70/song/m/it/10/75 5 \C70/song/m/n/10/96 ;\OT1/ptm/m/n/10 1\C70/song/m/it/10/4e *|\C70/song/m/n/10/ff ^^L| $\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 
-$\C70/song/m/it/10/75 5
- []
-
-
-LaTeX Warning: Citation `elecTextBook' on page 1 undefined on input line 127.
-
-<img/a.png, id=59, 904.37875pt x 624.3325pt>
-File: img/a.png Graphic file (type png)
-<use img/a.png>
-Package pdftex.def Info: img/a.png  used on input line 165.
-(pdftex.def)             Requested size: 227.62204pt x 157.13066pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
-[]\C70/song/m/it/10/75 1 \C70/song/m/n/10/56 � \C70/song/m/it/10/53 � \C70/song/m/it/10/77 �|\C70/song/m/n/10/ff ^^L| $\OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = 32\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 464\OML/cmm/m/it/10 ^^VA[]I[] \OT1/cmr/m/n/10 =
- []
-
-<img/b.png, id=61, 866.23625pt x 591.20876pt>
-File: img/b.png Graphic file (type png)
-<use img/b.png>
-Package pdftex.def Info: img/b.png  used on input line 174.
-(pdftex.def)             Requested size: 227.62204pt x 155.3525pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: img/b.png Graphic file (type png)
-<use img/b.png>
-Package pdftex.def Info: img/b.png  used on input line 182.
-(pdftex.def)             Requested size: 227.62204pt x 155.3525pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/c.png, id=62, 736.7525pt x 547.04375pt>
-File: img/c.png Graphic file (type png)
-<use img/c.png>
-Package pdftex.def Info: img/c.png  used on input line 193.
-(pdftex.def)             Requested size: 227.62204pt x 169.00584pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/d.png, id=63, 730.73pt x 549.05125pt>
-File: img/d.png Graphic file (type png)
-<use img/d.png>
-Package pdftex.def Info: img/d.png  used on input line 202.
-(pdftex.def)             Requested size: 227.62204pt x 171.02515pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/e.png, id=64, 736.7525pt x 549.05125pt>
-File: img/e.png Graphic file (type png)
-<use img/e.png>
-Package pdftex.def Info: img/e.png  used on input line 215.
-(pdftex.def)             Requested size: 227.62204pt x 169.62605pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
- </home/quantumbird/Public/Practicum/AnalogElec/paper/img/a.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/f.png, id=202, 731.73375pt x 550.055pt>
-File: img/f.png Graphic file (type png)
-<use img/f.png>
-Package pdftex.def Info: img/f.png  used on input line 221.
-(pdftex.def)             Requested size: 227.62204pt x 171.1028pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/g.png, id=203, 729.72626pt x 548.0475pt>
-File: img/g.png Graphic file (type png)
-<use img/g.png>
-Package pdftex.def Info: img/g.png  used on input line 227.
-(pdftex.def)             Requested size: 227.62204pt x 170.94664pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/h.png, id=204, 730.73pt x 539.01375pt>
-File: img/h.png Graphic file (type png)
-<use img/h.png>
-Package pdftex.def Info: img/h.png  used on input line 233.
-(pdftex.def)             Requested size: 227.62204pt x 167.89854pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/i.png, id=205, 726.715pt x 540.0175pt>
-File: img/i.png Graphic file (type png)
-<use img/i.png>
-Package pdftex.def Info: img/i.png  used on input line 239.
-(pdftex.def)             Requested size: 227.62204pt x 169.14233pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/j.png, id=206, 725.71124pt x 547.04375pt>
-File: img/j.png Graphic file (type png)
-<use img/j.png>
-Package pdftex.def Info: img/j.png  used on input line 245.
-(pdftex.def)             Requested size: 227.62204pt x 171.57678pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 6675) in paragraph at lines 253--256
-\C70/song/m/n/10/95 � \C70/song/m/n/10/65 �|\C70/song/m/n/10/ff ^^L| \C70/song/m/it/10/75 5 \C70/song/m/it/10/53 � \C70/song/m/n/10/58 � \C70/song/m/n/10/76 � \C70/song/m/n/10/54 � \C70/song/m/n/10/76 � \C70/song/m/n/10/4f M \C70/song/m/n/10/5d � \C70/song/m/it/10/51 � \C70/song/m/it/10/4e N \C70/song/m/n/10/4f � \C70/song/m/it/10/63 ^^A \C70/song/m/it/10/4e ^^M \C70/song/m/it/10/53 �|\C70/song/m/n/10/ff ^^L| \C70/song/m/n/10/98 � \C70/song/m/n/10/73 � \C70/song/m/n/10/59 '
- []
-
-
-LaTeX Warning: Citation `wang2009' on page 2 undefined on input line 278.
-
-[2 </home/quantumbird/Public/Practicum/AnalogElec/paper/img/b.png> </home/quantumbird/Public/Practicum/AnalogElec/paper/img/c.png> </home/quantumbird/Public/Practicum/AnalogElec/paper/img/d.png>]
-
-LaTeX Warning: Citation `li2009' on page 3 undefined on input line 286.
-
-
-LaTeX Warning: Citation `huang2010' on page 3 undefined on input line 302.
-
-
-LaTeX Warning: Citation `zhou2013' on page 3 undefined on input line 318.
-
-[3 </home/quantumbird/Public/Practicum/AnalogElec/paper/img/e.png> </home/quantumbird/Public/Practicum/AnalogElec/paper/img/f.png> </home/quantumbird/Public/Practicum/AnalogElec/paper/img/g.png> </home/quantumbird/Public/Practicum/AnalogElec/paper/img/h.png>]
-
-LaTeX Warning: Citation `hu2013' on page 4 undefined on input line 332.
-
-[4 </home/quantumbird/Public/Practicum/AnalogElec/paper/img/i.png> </home/quantumbird/Public/Practicum/AnalogElec/paper/img/j.png>]
-
-LaTeX Warning: Citation `chen2014' on page 5 undefined on input line 389.
-
-<img/nana.png, id=266, 400.49625pt x 500.87125pt>
-File: img/nana.png Graphic file (type png)
-<use img/nana.png>
-Package pdftex.def Info: img/nana.png  used on input line 439.
-(pdftex.def)             Requested size: 227.62204pt x 284.67416pt.
-
-LaTeX Warning: Citation `yearbook2005china' on page 5 undefined on input line 472.
-
-No file Template.bbl.
-
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
-
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-[5 </home/quantumbird/Public/Practicum/AnalogElec/paper/img/nana.png>] (/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:12: Missing \endcsname inserted.
-<to be read again> 
-                   \global 
-l.12 ...放大电路静态工作点测量}{{1}{1}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:12: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.12 ...放大电路静态工作点测量}{{1}{1}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:12: Extra \else.
-\CJK@XXX ...}\expandafter \CJK@ignorespaces \else 
-                                                  \csname u8:\string #1\stri...
-l.12 ...放大电路静态工作点测量}{{1}{1}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:12: Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.12 ...放大电路静态工作点测量}{{1}{1}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:12: Extra \else.
-\@newl@bel ...e #1@#2\endcsname \reserved@a \else 
-                                                  \@tempswatrue \fi 
-l.12 ...放大电路静态工作点测量}{{1}{1}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:17: Missing \endcsname inserted.
-<to be read again> 
-                   \global 
-l.17 ...级放大电路放大倍数测量}{{2}{2}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:17: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.17 ...级放大电路放大倍数测量}{{2}{2}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:17: Extra \else.
-\CJK@XXX ...}\expandafter \CJK@ignorespaces \else 
-                                                  \csname u8:\string #1\stri...
-l.17 ...级放大电路放大倍数测量}{{2}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:17: Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.17 ...级放大电路放大倍数测量}{{2}{2}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:17: Extra \else.
-\@newl@bel ...e #1@#2\endcsname \reserved@a \else 
-                                                  \@tempswatrue \fi 
-l.17 ...级放大电路放大倍数测量}{{2}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:19: Missing \endcsname inserted.
-<to be read again> 
-                   \global 
-l.19 ...级放大电路放大倍数测量}{{3}{2}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:19: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.19 ...级放大电路放大倍数测量}{{3}{2}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:19: Extra \else.
-\CJK@XXX ...}\expandafter \CJK@ignorespaces \else 
-                                                  \csname u8:\string #1\stri...
-l.19 ...级放大电路放大倍数测量}{{3}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:19: Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.19 ...级放大电路放大倍数测量}{{3}{2}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:19: Extra \else.
-\@newl@bel ...e #1@#2\endcsname \reserved@a \else 
-                                                  \@tempswatrue \fi 
-l.19 ...级放大电路放大倍数测量}{{3}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:23: Missing \endcsname inserted.
-<to be read again> 
-                   \global 
-l.23 ...射级放大电路的输出波形}{{4}{2}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:23: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.23 ...射级放大电路的输出波形}{{4}{2}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:23: Extra \else.
-\CJK@XXX ...}\expandafter \CJK@ignorespaces \else 
-                                                  \csname u8:\string #1\stri...
-l.23 ...射级放大电路的输出波形}{{4}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:23: Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.23 ...射级放大电路的输出波形}{{4}{2}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:23: Extra \else.
-\@newl@bel ...e #1@#2\endcsname \reserved@a \else 
-                                                  \@tempswatrue \fi 
-l.23 ...射级放大电路的输出波形}{{4}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:25: Missing \endcsname inserted.
-<to be read again> 
-                   \global 
-l.25 ...射级放大电路的输出波形}{{5}{2}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:25: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.25 ...射级放大电路的输出波形}{{5}{2}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:25: Extra \else.
-\CJK@XXX ...}\expandafter \CJK@ignorespaces \else 
-                                                  \csname u8:\string #1\stri...
-l.25 ...射级放大电路的输出波形}{{5}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:25: Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.25 ...射级放大电路的输出波形}{{5}{2}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-/home/quantumbird/Public/Practicum/AnalogElec/paper/Template.aux:25: Extra \else.
-\@newl@bel ...e #1@#2\endcsname \reserved@a \else 
-                                                  \@tempswatrue \fi 
-l.25 ...射级放大电路的输出波形}{{5}{2}}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-[]\C70/song/m/it/10/51 q \C70/song/m/it/10/5c ^^D \C70/song/m/it/10/7e � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/it/10/75 5 \C70/song/m/it/10/8d � \C70/song/m/n/10/97 Y \C70/song/m/sc/10/60 ^^A \C70/song/m/sc/10/5d � \C70/song/m/it/10/4f \ \C70/song/m/n/10/70 � \C70/song/m/n/10/6d K
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/n/10/91 �\C70/song/m/it/10/51 C70/song/m/n/51/113/h
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/it/10/51 q \C70/song/m/it/10/5c ^^D \C70/song/m/it/10/7e � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/it/10/75 5 \C70/song/m/it/10/8d � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/n/10/50 ^^M \C70/song/m/n/10/65 p \C70/song/m/n/10/6d K
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/n/10/91 �\C70/song/m/it/10/51 C70/song/m/n/51/113/h
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/it/10/51 q \C70/song/m/it/10/5c ^^D \C70/song/m/it/10/7e � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/it/10/75 5 \C70/song/m/it/10/8d � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/n/10/50 ^^M \C70/song/m/n/10/65 p \C70/song/m/n/10/6d K
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/n/10/91 �\C70/song/m/it/10/51 C70/song/m/n/51/113/h
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/it/10/51 q \C70/song/m/it/10/5c ^^D \C70/song/m/it/10/7e � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/it/10/75 5 \C70/song/m/it/10/8d � \C70/song/m/n/10/76 � \C70/song/m/sc/10/8f � \C70/song/m/it/10/51 � \C70/song/m/n/10/6c �
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/n/10/5f b\C70/song/m/it/10/51 C70/song/m/n/51/113/h
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/it/10/51 q \C70/song/m/it/10/5c ^^D \C70/song/m/it/10/7e � \C70/song/m/n/10/65 > \C70/song/m/n/10/59 ' \C70/song/m/it/10/75 5 \C70/song/m/it/10/8d � \C70/song/m/n/10/76 � \C70/song/m/sc/10/8f � \C70/song/m/it/10/51 � \C70/song/m/n/10/6c �
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-\C70/song/m/n/10/5f b\C70/song/m/it/10/51 C70/song/m/n/51/113/h
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--482
-
- []
-
- ) 
-Here is how much of TeX's memory you used:
- 19257 strings out of 492167
- 344277 string characters out of 6131557
- 376890 words of memory out of 5000000
- 23111 multiletter control sequences out of 15000+600000
- 604291 words of font info for 232 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 46i,15n,67p,545b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-!pdfTeX error: pdflatex (file cyberb9e): Font cyberb9e at 600 not found
- ==> Fatal error occurred, no output PDF file produced!
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+[]$\OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ^^Vf$\C70/song/m/it/10/75 5 \C70/song/m/n/10/5b �\OT1/ptm/m/n/10 2\C70/song/m/it/10/4e *
