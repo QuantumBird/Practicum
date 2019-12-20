@@ -10,7 +10,17 @@
 \usepackage{enumerate}
 \usepackage{verbatim}
 \usepackage{float}
-\usepackage{subfigure}
+%\usepackage{lipsum}
+
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false, font=normalsize, labelfont=sf, textfont=sf]{subfig}
+\else
+\usepackage[caption=false, font=footnotesize]{subfig}
+\fi
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 % 中英文摘要并存
@@ -27,44 +37,44 @@
 
 \title{基本共射极放大电路的仿真与探究}
 
-\author{
-  薛昊辰,于宗玄,高浚哲,麻柯柯,胡潇丹
-}
+%\author{
+%  薛昊辰,于宗玄,高浚哲,麻柯柯,胡潇丹
+%}
 
 % 选择作者样式
-\begin{comment}
+%\begin{comment}
 \author{
   \IEEEauthorblockN{薛昊辰}
   \IEEEauthorblockA{
-    西安邮电大学\\
-    03185002
+    id: 05181106\\
+    s.c. id: 29
   }
   \and
   \IEEEauthorblockN{于宗玄}
   \IEEEauthorblockA{
-    西安邮电大学\\
-    03185002
+    id: 03185002\\
+    s.c. id: 31
   }
   \and
   \IEEEauthorblockN{高浚哲}
   \IEEEauthorblockA{
-    西安邮电大学\\
-    03185002
+    id: 03185002\\
+    s.c. id: 28
   }
   \and
   \IEEEauthorblockN{麻柯柯}
   \IEEEauthorblockA{
-    西安邮电大学\\
-    03185002
+    XUPT-03185002\\
+    s.c. id: 28
   }
   \and
   \IEEEauthorblockN{胡潇丹}
   \IEEEauthorblockA{
-    西安邮电大学\\
-    03185002
+    XUPT-03185002\\
+    s.c. id: 28
   }
 }
-\end{comment}
+%\end{comment}
 
 
 \maketitle
@@ -122,23 +132,53 @@
 并产生直流电流IB，直流电源Vcc为集电结提供反偏电压，使BJT工作于放大状态。
 加入输入电压时，放大电路中的电流和电压既有直流成分也有交流成分，
 所以在计算时要将交流与直流分开进行。
+
+%\begin{comment}
+\begin{figure}[h!]
+  \begin{center}
+    \begin{circuitikz}
+      \draw (0,0)
+      to[V,v=$U_q$,i<^=$i_q$] (0,2) % 电压源
+      to[short] (2,2)
+      to[R=$R_1$,i^<=$i_R$] (2,0) % 电阻
+      to[short,*-] (0,0);
+      \draw (2,2)
+      to[short,*-] (4,2)
+      to[L=$L_1$,i^<=$i_L$] (4,0)  % 电感
+      to[short,*-]  (2,0);
+      \draw (4,2)
+      to[short,*-] (6,2)
+      to[C=$C_1$,i^<=$i_C$] (6,0)  % 电容
+      to[short] (4,0);
+      \draw (4,0) to[short] node[ground] {GND} (4,-0.5);
+    \end{circuitikz}
+    \caption{first circuit.}
+  \end{center}
+\end{figure}
+%\end{comment}
+
 \paragraph{电路元件选择}\noindent
 
 $10\mu f$电容2个，$4.2k\Omega$电阻1个，$3.6k\Omega$电阻1个,$350k\Omega$1个
 \subsubsection{理论分析} % TODO: fix newline
 静态工作点理论值计算:\cite{elecTextBook}
+
+BJT基极电流
 \begin{equation}
   I_{BQ}=\frac{V_{CC}-V_{BE}}{R_b}=\frac{12V-0.7V}{350k\Omega}=32.29\mu A
 \end{equation}
 
+由BJT的分配电流关系求得BJT集电极电流
 \begin{equation}
   I_{CQ}=\beta I_{BQ}=50\times32.29\mu A=1.615mA
 \end{equation}
 
+BJT射级电流
 \begin{equation}
   I_{EQ}=(1+\beta)I_{BQ}=1.647mA
 \end{equation}
 
+由电路结构可求得$V_{CEQ}$
 \begin{equation}
   \begin{split}
     V_{CEQ}&=V_{CC}-I_{CQ}R_C\\
@@ -217,6 +257,7 @@ $10\mu f$电容2个，$4.2k\Omega$电阻1个，$3.6k\Omega$电阻1个,$350k\Omeg
 在本题要求的电路基础上,不改变其他条件且电路不失真的情况下，
 从1hz开始逐步增大输入电压的频率，观察输出电压波形的变化
 %TODO: insert Picture
+\begin{comment}
 \begin{figure}[H]
   \includegraphics[width=8cm]{img/e.png}
   \caption{f = 1Hz Av=1.832/1.007=1.81926514}
@@ -252,7 +293,31 @@ $10\mu f$电容2个，$4.2k\Omega$电阻1个，$3.6k\Omega$电阻1个,$350k\Omeg
   \caption{f = 50000Khz Av = 25.766/0.988617 = 26.0626714}
 %  \label{$f = 1Hz\    A_V=1.832/1.007=1.81926514$}
 \end{figure}
+\end{comment}
 
+\begin{figure*}
+  \centering
+  \subfloat[a]{
+     \includegraphics[width=0.45\linewidth]{img/e.png}}
+  \label{1a}\hfill
+  \subfloat[b]{
+      \includegraphics[width=0.45\linewidth]{img/f.png}}
+  \label{1b}\\
+  \subfloat[c]{
+      \includegraphics[width=0.45\linewidth]{img/g.png}}
+  \label{1c}\hfill
+  \subfloat[d]{
+      \includegraphics[width=0.45\linewidth]{img/h.png}}
+   \label{1d} \\
+   \subfloat[e]{
+       \includegraphics[width=0.45\linewidth]{img/i.png}}
+   \label{1e}\hfill
+   \subfloat[f]{
+       \includegraphics[width=0.45\linewidth]{img/j.png}}
+    \label{1f}
+  \caption{共射级放大电路输出波形随输入频率的变化}
+  \label{fig1} 
+\end{figure*}
 
 
 分析:\par
@@ -427,11 +492,21 @@ EDA与电子技术课程设计、微机原理及其应用、电力电子、
 2019年12月15日：汇总各个成员的结果，报告完成\par
 
 \section{设计感想}
-设计感想 TODO
+通过这次课程设计，让我们更加了解课本知识，和以往对知识的疏忽得以补充。
+在完成这次的课程设计的过程中，我们不仅对我们已学到的知识进行了整合，
+而且在解决问题的过程中，我们也学到了很多有用的知识，比如调试模型的同学们在
+使用Mutsim的过程中练习并巩固了电路模型的仿真与数据处理，进行时政分析的
+同学们在此过程中提高了文献查找与时政分析的能力，排版的同学又把 \LaTeX\ 捡起，
+提高了统筹与排版能力。。。“纸上得来终觉浅，绝知此事要躬行。”我们每个人都在
+完成课程设计的过程中得到了不小的提高。
 
 
 \section{致谢}
-感谢老师在本学期对我们的教导 TODO
+首先感谢老师教给我们的理论知识，没有老师的辛勤付出，
+我们就无法获得扎实的理论基础，没有理论基础，仿真模拟就无从谈起。
+其次感谢团队的同学们，没有他们的协力合作，大作业也无法顺利完成。
+最后感谢引用书籍的作者们，没有他们的资料支持，
+我们的分析过程中遇到的障碍就可能需要很长时间来解决。
 
 %\thanks{感谢老师在本学期对我们的教导}
 %\begin{figure}[h]
