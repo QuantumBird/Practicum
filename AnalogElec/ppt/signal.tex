@@ -1,0 +1,46 @@
+\documentclass[UTF8]{ctexbeamer}
+\usepackage{hyperref}
+\usetheme{Berlin}
+
+\title{《信号与系统》习题讨论：7.3}
+\author{高浚哲}
+\begin{document}
+  
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}{题目}
+    系统函数$H(s)$的零点在$1\pm j$，极点在$-1\pm j$，且$H(0)=3$，写出其$H(s)$的表示式。
+  \end{frame}
+
+  \begin{frame}{解题思路}
+    集总参数LTI系统的系统函数是复变量$s$或$z$的有理分式，即
+    $$
+      H(\cdot) = \frac{B(\cdot)}{A(\cdot)}
+    $$
+    对于本题的连续系统，则有：
+    $$
+      H(s)=\frac{b_m s^m+b_{m-1} s^{m-1}+\dots+b_1 s + b_0}{s^n+a_{n-1}s^{n-1}+\dots+a_1s+a_0}
+    $$
+    由零点和极点定义可知：零点即为方程$A(s)=0$的解，极点为$B(s)=0$的解；则系统函数可进一步写作：
+    $$
+      H(s)=\gamma \frac{(s-\beta_1)(s-\beta_2)\dots(s-\beta_m)}{(s-\alpha_1)(s-\alpha_2)\dots(s-\alpha_n)}
+    $$
+  \end{frame}
+
+  \begin{frame}{解题思路}
+    在本题中，由于已知系统函数的零点和极点，系统函数可写作：
+    $$
+      H(s)=\gamma \frac{(s+1)^2+1}{(s-1)^2+1}
+    $$
+    题中给出条件：$H(0)=3$，将其带入，则有：
+    $$
+      H(0)=\gamma \frac{(0 + 1)^2+1}{(0-1)^2+1}=3
+    $$
+    解之得：$\gamma = 3$，即：
+    $$
+      H(s)=3 \frac{(s+1)^2+1}{(s-1)^2+1}
+    $$
+  \end{frame}
+\end{document}
