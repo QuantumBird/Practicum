@@ -132,6 +132,7 @@ public:
   Mat(MType m) { // may core dump, because double free!!!!
     //mat = & m;
     // need auto ptr;
+    mat = m.new_and_copy();
   }
   ~Mat() {
     delete mat; // TODO: may have some problem
@@ -219,12 +220,31 @@ template<class MType>
 Mat<MType> operator-(Mat<MType> & A, Mat<MType> & B) {
   return *(A.mat) - *(B.mat);
 }
-/*
+//////////////////////////
 template<class MType>
-Mat<MType> operator*(Mat<MType> & A, Mat<MType> & B) {
-  return *(A.mat) * *(B.mat);
-}*/
+Mat<MType> operator*(Mat<MType> & A, typename MType::ElemType & cst) {
+  return *(A.mat) * cst;
+}
 
+template<class MType>
+Mat<MType> operator*(typename MType::ElemType & cst, Mat<MType> & A) {
+  return *(A.mat) * cst;
+}
+////
+template<class MType>
+Mat<MType> operator+(Mat<MType> & A, typename MType::ElemType & cst) {
+  return *(A.mat) + cst;
+}
+
+template<class MType>
+Mat<MType> operator+(typename MType::ElemType & cst, Mat<MType> & A) {
+  return *(A.mat) + cst;
+}
+////
+template<class MType>
+Mat<MType> operator-(Mat<MType> & A, typename MType::ElemType & cst) {
+  return *(A.mat) - cst;
+}
 
 // TODO
 /*

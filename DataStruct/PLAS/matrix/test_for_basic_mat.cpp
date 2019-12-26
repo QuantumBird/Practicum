@@ -52,6 +52,21 @@ int main () {
     cout << "test for operator << " << endl;
     cout << ans2 << endl;
     /**********************************************/
+    APART;
+    cout << "test for copy" << endl;
+    auto cpy = ans2.copy();
+    cout << cpy << endl;
+    cpy.mat[1][1] = -1;
+    cout << "cpy:" << endl;
+    cout << cpy << endl;
+    cout << "ans2" << endl;
+    cout << ans2 << endl;
+    /**********************************************/
+    APART;
+    cout << "test for elem type trans" << endl;
+    GEmat<double> tmp = MatElemTypeTrans<double, int>(cpy);
+    cout << tmp << endl;
+    /**********************************************/
     //cout << "5. test for GEcopy" << endl;
     //GEmat<int> cpy(D32);
     //cpy.display();

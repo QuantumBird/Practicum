@@ -17,7 +17,17 @@ int main(){
   ta << 3;
   cout << ta << endl;
   //auto ans = *(m.mat) + *(ta.mat);
-  auto ans = m + ta;
+  Mat<GEmat<int>> ans = m + ta;
   cout << ans << endl;
+  auto tb = 3 + m;
+  cout << tb << endl;
+  MatShape p = tb.shape();
+  cout << "-----------------------------------" << endl;
+  for (int i = 0; i < p.first; i ++) {
+    for (int j = 0; j < p.second; j ++) {
+      cout << tb(i, j) << " ";
+    }
+    cout << endl;
+  }
   return 0;
 }

@@ -212,6 +212,18 @@ public:
     }
     return ans;
   }
+  GEmat<T> copy() {
+    return MatCopy(*this); // may have trouble
+  }
+  GEmat<T> * new_and_copy() {
+    GEmat<T> * ret = new GEmat<T>(_rows_, _cols_, false);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ret -> mat[i][j] = mat[i][j];
+      }
+    }
+    return ret;
+  }
 };
 
 template<typename T>
@@ -219,7 +231,7 @@ std::ostream & operator<<(std::ostream & out, GEmat<T> & m){
   out << m.toString();
   return out;
 }
-////////////////////// unused /////////////////////////////////
+
 template<typename T>
 GEmat<T> GEmultM(GEmat<T> & A, GEmat<T> & B) {
 #ifdef NAIVE_VER
@@ -249,6 +261,32 @@ GEmat<T> GEmultM(GEmat<T> & A, GEmat<T> & B) {
 #endif
 }
 
+template<typename T>
+GEmat<T> MatCopy(GEmat<T> & m) {
+  GEmat<T> ret(m._rows_, m._cols_, false);
+  for (int i = 0; i < m._rows_; i ++) {
+    for (int j = 0; j < m._cols_; j ++) {
+      ret.mat[i][j] = m.mat[i][j];
+    }
+  }
+  return ret;
+}
+template<typename Tt, typename Tf>
+GEmat<Tt> MatElemTypeTrans(GEmat<Tf> & m) {
+  GEmat<Tt> ret(m._rows_, m._cols_, false);
+  for (int i = 0; i < m._rows_; i ++) {
+    for (int j = 0; j < m._cols_; j ++) {
+      ret.mat[i][j] = Tt(m.mat[i][j]);
+    }
+  }
+  return ret;
+}
+
+
+
+
+
+////////////////////////////// useless ////////////////////////
 /*
 template<typename T>
 GEmat<T> GEcopy(GEmat<T> A) {
