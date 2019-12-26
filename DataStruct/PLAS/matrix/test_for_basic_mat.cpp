@@ -37,6 +37,8 @@ int main () {
     GEmat<int> D23 = GEtransp(D32);
     D23.display();
     /**********************************************/
-    
+    cout << "5. test for GEcopy" << endl;
+    GEmat<int> cpy = D32.copy();
+    cpy.display();
     return 0;
 }

@@ -106,6 +106,7 @@ public:
 template<class MType>
 class Mat {
 public:
+  typedef typename MType::ElemType ElemType;
   MType * mat = NULL;
   // -------- matrix classify --------------
   bool isSquare = false;
