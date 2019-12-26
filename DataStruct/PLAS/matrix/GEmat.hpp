@@ -13,7 +13,7 @@ last modify: 2019-12-25 4: 56 pm
 
 
 #include "basic_mat.h"
-
+#include "extratype.hpp"
 #define NAIVE_VER
 /*
   条件编译宏
@@ -37,7 +37,10 @@ public:
   int _rows_, _cols_;
   T ** mat;
   // construct
-  GEmat(int rows, int cols, bool fill=false, T fill_elem=0){
+  void construct( int rows, 
+                  int cols, 
+                  bool fill=false, 
+                  T fill_elem=0 ) {
     _rows_ = rows;
     _cols_ = cols;
     if (rows == 0 || cols == 0) {
@@ -65,8 +68,14 @@ public:
       }
     }
   }
+  GEmat(int rows,
+        int cols,
+        bool fill=false,
+        T fill_elem=0) {
+    construct(rows, cols, fill, fill_elem);
+  }
   GEmat(MatShape shape, bool fill=false, T fill_elem=0) {
-    GEmat(shape.first, shape.second, fill, fill_elem);
+    construct(shape.first, shape.second, fill, fill_elem);
   }
   ~GEmat(){
     for (int i = 0; i < _rows_; i ++) {
@@ -102,13 +111,115 @@ public:
       std :: cout << std :: endl;
     }
   }
-  GEmat copy() {
-    return GEcopy(*this); // WARN: may have error!!
+  std::string toString() {
+    std::ostringstream ostr;
+    //ostr << "rows: "  << _rows_
+    //     << " cols: " << _cols_ << "\n";
+    ostr << "shape: " << _rows_ << "x" << _cols_ << "\n"; 
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ostr << mat[i][j] << " ";
+      }
+      ostr << "\n";
+    }
+    ostr << "elem type: " << getTypeStr<T>() << "\n";
+    return ostr.str();
+  }
+  /*
+  void forAll(T (* func)(T)) {
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        mat[i][j] = func(mat[i][j]);
+      }
+    }
+  }
+  T reduce(T (* func)(T), int dim=0) {
+    ; // TODO
+  }*/
+  // redefine operator
+  GEmat<T> operator*(GEmat<T> & m) {
+    if (_cols_ != m._rows_) {
+      throw ; // TODO
+    }
+    GEmat<T> ans(_rows_, m._cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < m._cols_; j ++) {
+        for (int k = 0; k < _cols_; k ++) {
+          ans.mat[i][j] += mat[i][k] * m.mat[k][j];
+        }
+      }
+    }
+    return ans;
+  }
+  GEmat<T> operator+(GEmat<T> & m) {
+    if ((_rows_ != m._rows_) || (_cols_ != m._cols_)) {
+      throw ; // TODO
+    }
+    GEmat<T> ans(_rows_, _cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ans.mat[i][j] = mat[i][j] + m.mat[i][j];
+      }
+    }
+    return ans;
+  }
+  GEmat<T> operator-(GEmat<T> & m) {
+    if ((_rows_ != m._rows_) || (_cols_ != m._cols_)) {
+      throw ; // TODO
+    }
+    GEmat<T> ans(_rows_, _cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ans.mat[i][j] = mat[i][j] - m.mat[i][j];
+      }
+    }
+    return ans;
+  }
+  // untested !!!! TODO: test
+  GEmat<T> operator*(T cst) {
+    GEmat<T> ans(_rows_, _cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ans.mat[i][j] = mat[i][j] * cst;
+      }
+    }
+    return ans;
+  }
+  GEmat<T> operator+(T cst) {
+    GEmat<T> ans(_rows_, _cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ans.mat[i][j] = mat[i][j] + cst;
+      }
+    }
+    return ans;
+  }
+  GEmat<T> operator-(T cst) {
+    GEmat<T> ans(_rows_, _cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ans.mat[i][j] = mat[i][j] - cst;
+      }
+    }
+    return ans;
+  }
+  GEmat<T> operator/(T cst) {
+    GEmat<T> ans(_rows_, _cols_);
+    for (int i = 0; i < _rows_; i ++) {
+      for (int j = 0; j < _cols_; j ++) {
+        ans.mat[i][j] = mat[i][j] / cst;
+      }
+    }
+    return ans;
   }
 };
 
-
-
+template<typename T>
+std::ostream & operator<<(std::ostream & out, GEmat<T> & m){
+  out << m.toString();
+  return out;
+}
+////////////////////// unused /////////////////////////////////
 template<typename T>
 GEmat<T> GEmultM(GEmat<T> & A, GEmat<T> & B) {
 #ifdef NAIVE_VER
@@ -138,6 +249,7 @@ GEmat<T> GEmultM(GEmat<T> & A, GEmat<T> & B) {
 #endif
 }
 
+/*
 template<typename T>
 GEmat<T> GEcopy(GEmat<T> A) {
   MatShape sp = A.shape();
@@ -149,6 +261,7 @@ GEmat<T> GEcopy(GEmat<T> A) {
   }
   return ans;
 }
+*/
 
 template<typename T>
 GEmat<T> GEmultC(T cst, GEmat<T> & A) {

@@ -13,9 +13,9 @@ testMat: test_mat
 	./test_mat
 
 
-TEST_GM_DEP = test_for_mat.cpp Mat.hpp GEmat.hpp
+TEST_MAT_DEP = test_for_mat.cpp Mat.hpp GEmat.hpp
 test_mat: $(TEST_MAT_DEP)
-	$(CMPLR) -o test_mat $(TEST_GM_DEP)
+	$(CMPLR) -o test_mat $(TEST_MAT_DEP)
 
 testET: test_extratype
 	./test_extratype

@@ -4,6 +4,9 @@
 #include <algorithm>
 #include <iostream>
 #include <string.h>
+#include <string>
+#include <sstream>
+#include <memory>
 
 enum MatType {
   GE, // general
@@ -19,6 +22,7 @@ enum MatType {
 };
 
 typedef std::pair<int, int> MatShape;
+typedef std::pair<int, int> Position;
 /*
 template<typename T> 
 class GEmat {

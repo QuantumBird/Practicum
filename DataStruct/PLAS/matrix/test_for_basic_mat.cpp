@@ -22,6 +22,7 @@ int main () {
     A.display();
     cout<<"B: "<<endl;
     B.display();
+    
     /***********************************************/
     APART;
     cout<< "3. mult 2 3x3 matrix" << endl;
@@ -37,8 +38,23 @@ int main () {
     GEmat<int> D23 = GEtransp(D32);
     D23.display();
     /**********************************************/
-    cout << "5. test for GEcopy" << endl;
-    GEmat<int> cpy = D32.copy();
-    cpy.display();
+    APART;
+    cout << "test for '*' between D32 and D23" << endl;
+    GEmat<int> ans = D23 * D32;
+    ans.display();
+    /**********************************************/
+    APART;
+    cout << "test for '+'" << endl;
+    GEmat<int> ans2 = A + B;
+    ans2.display();
+    /**********************************************/
+    APART;
+    cout << "test for operator << " << endl;
+    cout << ans2 << endl;
+    /**********************************************/
+    //cout << "5. test for GEcopy" << endl;
+    //GEmat<int> cpy(D32);
+    //cpy.display();
+    /**********************************************/
     return 0;
 }

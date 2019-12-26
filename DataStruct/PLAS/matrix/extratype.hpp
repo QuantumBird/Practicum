@@ -79,11 +79,11 @@ std::string getTypeStr<bool>() {
   return std::string("bool");
 }
 
-
+/*
 template<class MType>
 std::string getElemTypeStr(MType mat) {
   return getTypeStr<typename MType::ElemType>();
-}
+}*/
 
 
 

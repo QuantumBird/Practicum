@@ -92,13 +92,13 @@ public:
   5. display -> toString
   6. copy
   * * * * * TODO * * * * * * * *
-  * (+) Mat -> Mat -> Mat
-  * (-) Mat -> Mat -> Mat
-  * (*) Mat -> Mat -> Mat
+  * (+) Mat -> Mat -> Mat           ok
+  * (-) Mat -> Mat -> Mat           ok
+  * (*) Mat -> Mat -> Mat           ok
   * (/) Mat -> Mat -> Mat
-  * (+) (Num p) => Mat -> p -> Mat
-  * (-) (Num p) => Mat -> p -> Mat
-  * (*) (Num p) => Mat -> p -> Mat
+  * (+) (Num p) => Mat -> p -> Mat  ok
+  * (-) (Num p) => Mat -> p -> Mat  ok
+  * (*) (Num p) => Mat -> p -> Mat  ok
   * (/) (Num p) => Mat -> p -> Mat
   * transp Mat -> Mat
 */
@@ -110,6 +110,9 @@ public:
   MType * mat = NULL;
   // -------- matrix classify --------------
   bool isSquare = false;
+  //---------- fill locater ----------------
+  int fill_pos_x = 0;
+  int fill_pos_y = 0;
   //----------------------------------------
   Mat(int rows, int cols, bool fill=false, 
       typename MType::ElemType fill_val=0) {
@@ -125,8 +128,10 @@ public:
               // or change it to try{ ... }catch{ .. }
     }
   }
-  Mat(MType m) {
-    mat = & m.copy();
+  // TODO & WARN: may have error whem (m + m)
+  Mat(MType m) { // may core dump, because double free!!!!
+    //mat = & m;
+    // need auto ptr;
   }
   ~Mat() {
     delete mat; // TODO: may have some problem
@@ -147,10 +152,88 @@ public:
   void display() {
     mat -> display();
   }
+  std::string toString() {
+    return mat -> toString();
+  }
   typename MType::ElemType operator()(int idxr, int idxc) {
     return getElem(idxr, idxc);
   }
   bool operator()(int idxr, int idxc, typename MType::ElemType elem) {
     return setElem(idxr, idxc, elem);
   }
+  /*
+  Mat<MType> operator*(Mat<MType> & m) {
+    return (*mat) * (*(m.mat));
+  }
+  Mat<MType> operator+(Mat<MType> & m) {
+    return (*mat) + (*(m.mat));
+  }
+  Mat<MType> operator-(Mat<MType> & m) {
+    return (*mat) - (*(m.mat));
+  }
+  Mat<MType> operator*(ElemType cst) {
+    return (*mat) * cst;
+  }
+  Mat<MType> operator+(ElemType cst) {
+    return (*mat) + cst;
+  }
+  Mat<MType> operator-(ElemType cst) {
+    return (*mat) - cst;
+  }*/
 };
+
+template<class MType>
+std::ostream & operator<<(std::ostream & out, Mat<MType> & m) {
+  out << m.toString();
+  return out;
+}
+
+template<class MType>
+bool operator<<(Mat<MType> & m, typename MType::ElemType val) {
+  MatShape p = m.shape();
+  if (0 <= m.fill_pos_x && m.fill_pos_x < p.second 
+   && 0 <= m.fill_pos_y && m.fill_pos_y < p.first) {
+    m(m.fill_pos_y, m.fill_pos_x, val);
+    m.fill_pos_x ++;
+    if (m.fill_pos_x >= p.second){
+      m.fill_pos_x = 0;
+      m.fill_pos_y ++;
+    }
+    return true;
+  }else{
+    return false;
+  }
+}
+
+template<class MType>
+Mat<MType> operator*(Mat<MType> & A, Mat<MType> & B) {
+  return *(A.mat) * *(B.mat);
+}
+
+template<class MType>
+Mat<MType> operator+(Mat<MType> & A, Mat<MType> & B) {
+  return *(A.mat) + *(B.mat);
+}
+
+template<class MType>
+Mat<MType> operator-(Mat<MType> & A, Mat<MType> & B) {
+  return *(A.mat) - *(B.mat);
+}
+/*
+template<class MType>
+Mat<MType> operator*(Mat<MType> & A, Mat<MType> & B) {
+  return *(A.mat) * *(B.mat);
+}*/
+
+
+// TODO
+/*
+template<class MType>
+bool operator<<(Mat<MType> & m, 
+  pair<Position, typename MType::ElemType> elem) {
+  MatShape p = m.shape();
+  if (0 <= m.fill_pos_x && m.fill_pos_x < p.second 
+   && 0 <= m.fill_pos_y && m.fill_pos_y < p.first) {
+  }
+}
+*/
