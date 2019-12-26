@@ -1,4 +1,5 @@
 // basic_mat.h
+#pragma once
 #include <stdlib.h>
 #include <algorithm>
 #include <iostream>

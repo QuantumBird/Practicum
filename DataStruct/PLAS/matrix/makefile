@@ -1,4 +1,4 @@
-CMPLR = g++ --std=c++11
+CMPLR = g++ -std=c++11
 
 testGM: test_gm
 	./test_gm
@@ -9,6 +9,16 @@ TEST_GM_DEP = test_for_basic_mat.cpp GEmat.hpp #basic_mat_mult.cpp
 test_gm: $(TEST_GM_DEP)
 	$(CMPLR) -o test_gm $(TEST_GM_DEP)
 
+testMat: test_mat
+	./test_mat
+
+
+TEST_GM_DEP = test_for_mat.cpp Mat.hpp GEmat.hpp
+test_mat: $(TEST_MAT_DEP)
+	$(CMPLR) -o test_mat $(TEST_GM_DEP)
+
 clean:
 	# clear for testGM
 	rm -f test_gm 
+	# clean for testMat
+	rm -f test_mat

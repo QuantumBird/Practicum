@@ -36,5 +36,7 @@ int main () {
     D32.display(); 
     GEmat<int> D23 = GEtransp(D32);
     D23.display();
+    /**********************************************/
+    
     return 0;
 }

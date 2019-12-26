@@ -19,7 +19,7 @@ last modify: 2019-12-25 4: 56 pm
   条件编译宏
   NAIVE_VER:
     这个宏是为了标记朴素算法和高级算法的区别
-    例如矩阵乘法的 O(n^3) 和 O(n^2.7) 实现
+    例如矩阵乘法的 O(n^3) 和 O(n^2.7) 的实现
 */
 
 //#define PARALLEL
@@ -33,6 +33,7 @@ last modify: 2019-12-25 4: 56 pm
 template<typename T> 
 class GEmat {
 public:
+  typedef const T ElemType;
   int _rows_, _cols_;
   T ** mat;
   // construct
@@ -80,8 +81,12 @@ public:
   T getElem(int idxr, int idxc) {
     return mat[idxr][idxc];
   }
-  void setElem(int idxr, int idxc, T elem) {
+  bool setElem(int idxr, int idxc, T elem) {
+    if ((idxr < 0 && idxr >= _rows_) || (idxc < 0 && idxc >= _cols_)) {
+      return false;
+    }
     mat[idxr][idxc] = elem;
+    return true;
   }
   MatType getType(){
     return GE;
@@ -96,6 +101,9 @@ public:
       }
       std :: cout << std :: endl;
     }
+  }
+  GEmat copy() {
+    return GEcopy(*this); // WARN: may have error!!
   }
 };
 
