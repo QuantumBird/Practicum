@@ -2,6 +2,7 @@
 #include "GEmat.hpp"
 #include "Mat.hpp"
 using namespace std;
+using namespace PLAS;
 
 int main(){
   Mat<GEmat<int>> m(3, 3, true, 0);

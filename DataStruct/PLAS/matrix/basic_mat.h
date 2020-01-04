@@ -7,6 +7,9 @@
 #include <string>
 #include <sstream>
 #include <memory>
+#include <type_traits> // c++11 for meta programming
+
+#define SPACE_NAME PLAS
 
 enum MatType {
   GE, // general
@@ -39,3 +42,4 @@ public:
   void display();
 };
 */
+//#include "GEmat.hpp"

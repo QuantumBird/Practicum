@@ -25,6 +25,14 @@ test_extratype: $(TEST_ET_DEP)
 	$(CMPLR) -o test_extratype $(TEST_ET_DEP)
 
 
+testMatLU: test_mat_LU
+	./test_mat_LU
+
+
+TEST_MATLU_DEP = test_for_mat_LU.cpp Mat.hpp GEmat.hpp
+test_mat_LU: $(TEST_MATLU_DEP)
+	$(CMPLR) -o test_mat_LU $(TEST_MATLU_DEP)
+
 clean:
 	# clear for testGM
 	rm -f test_gm 
@@ -32,3 +40,4 @@ clean:
 	rm -f test_mat
 	# clean for testET
 	rm -rf test_extratype
+	rm -f test_for_mat_LU

@@ -1,4 +1,5 @@
 #include "basic_mat.h"
+#pragma once
 //#include "GEmat.hpp"
 /*
 template<typename T>
@@ -103,6 +104,9 @@ public:
   * transp Mat -> Mat
 */
 
+// SPACE_NAME is defined in basic_mat.h
+namespace SPACE_NAME {
+// namespace begin
 template<class MType>
 class Mat {
 public:
@@ -205,47 +209,56 @@ bool operator<<(Mat<MType> & m, typename MType::ElemType val) {
     return false;
   }
 }
-
+// TODO: need to modify
 template<class MType>
 Mat<MType> operator*(Mat<MType> & A, Mat<MType> & B) {
-  return *(A.mat) * *(B.mat);
+  //return *(A.mat) * *(B.mat);
+  return MatMultM(*(A.mat), *(B.mat));
 }
 
 template<class MType>
 Mat<MType> operator+(Mat<MType> & A, Mat<MType> & B) {
-  return *(A.mat) + *(B.mat);
+  //return *(A.mat) + *(B.mat);
+  return MatPlusM(*(A.mat), *(B.mat));
 }
 
 template<class MType>
 Mat<MType> operator-(Mat<MType> & A, Mat<MType> & B) {
-  return *(A.mat) - *(B.mat);
+  //return *(A.mat) - *(B.mat);
+  return MatSubtM(*(A.mat), MatMultC(*(B.mat)));
 }
 //////////////////////////
 template<class MType>
 Mat<MType> operator*(Mat<MType> & A, typename MType::ElemType & cst) {
-  return *(A.mat) * cst;
+  //return *(A.mat) * cst;
+  return MatMultC(*(A.mat), cst);
 }
 
 template<class MType>
 Mat<MType> operator*(typename MType::ElemType & cst, Mat<MType> & A) {
-  return *(A.mat) * cst;
+  //return *(A.mat) * cst;
+  return MatMultC(*(A.mat), cst);
 }
 ////
 template<class MType>
 Mat<MType> operator+(Mat<MType> & A, typename MType::ElemType & cst) {
-  return *(A.mat) + cst;
+  //return *(A.mat) + cst;
+  return MatPlusC(*(A.mat), cst);
 }
 
 template<class MType>
 Mat<MType> operator+(typename MType::ElemType & cst, Mat<MType> & A) {
-  return *(A.mat) + cst;
+  //return *(A.mat) + cst;
+  return MatPlusC(*(A.mat), cst);
 }
 ////
 template<class MType>
 Mat<MType> operator-(Mat<MType> & A, typename MType::ElemType & cst) {
-  return *(A.mat) - cst;
+  //return *(A.mat) - cst;
+  return MatPlusC(*(A.mat), cst);
 }
-
+// namespace end;
+}
 // TODO
 /*
 template<class MType>

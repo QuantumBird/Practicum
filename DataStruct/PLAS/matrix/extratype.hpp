@@ -1,5 +1,5 @@
 #include <string>
-
+#pragma once
 //////////////////////////////////////
 template<typename T>
 class Type {

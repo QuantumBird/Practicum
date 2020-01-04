@@ -24,3 +24,16 @@
     typedef typename MType::ElemType ElemType;
     ```
     将被包装的矩阵的元素类型提取出来。
+    合理的利用`C++`强大的元编程能力，将部分类型交给编译器去计算，将少写很多重复的模板代码（说的好，我选择`Python/Scala/Haskell/Lisp` :)）
+
+2. 在设计TP （压缩三角矩阵）时遇到问题：三角矩阵相乘不一定是三角矩阵，无法使用多态来完成矩阵相乘类型的优化。
+
+    使用模板函数来完成编译期类型计算：
+
+    up_triang | slash | -> | up_triang | slash | -> |up_triang | slah | (GE)
+    -|-|-|-|-|-|-|-|-
+    false|false||false|false||||true
+    false|true||false|true||false|true|
+    true|false||true|false||||true
+    true|true||true|true||true|true|
+    

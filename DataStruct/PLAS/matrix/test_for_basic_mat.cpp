@@ -1,6 +1,7 @@
 #include "GEmat.hpp"
 #define  APART cout << "----------------------------------" << endl
 using namespace std;
+using namespace PLAS;
 
 int main () {
     cout << "test bench for basic_mat" << endl;
@@ -26,7 +27,7 @@ int main () {
     /***********************************************/
     APART;
     cout<< "3. mult 2 3x3 matrix" << endl;
-    GEmat<int> C = GEmultM(A, B);
+    GEmat<int> C = MatMultM(A, B);
     C.display();
     /***********************************************/
     APART;
@@ -35,7 +36,7 @@ int main () {
     D32.setElem(0, 0, 1);
     D32.setElem(1, 1, 2);
     D32.display(); 
-    GEmat<int> D23 = GEtransp(D32);
+    GEmat<int> D23 = MatTransp(D32);
     D23.display();
     /**********************************************/
     APART;

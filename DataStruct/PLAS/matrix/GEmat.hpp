@@ -3,12 +3,6 @@ GMmat.hpp
 author: Junzhe Gao
 date  : 2019-12-25 
 last modify: 2019-12-25 4: 56 pm
-------------------------------------------------------
-在本文件中实现了基础的GM矩阵类： GEmat
-以及GEmat的一些操作：
-    * GEmultM
-    * GEmultC
-    * GEcopy
 ******************************************************/
 
 
@@ -30,6 +24,9 @@ last modify: 2019-12-25 4: 56 pm
 */
 
 
+//s SPACE_NAME is defined in basic_mat.h
+namespace SPACE_NAME {
+// namespace begin
 template<typename T> 
 class GEmat {
 public:
@@ -137,6 +134,7 @@ public:
     ; // TODO
   }*/
   // redefine operator
+  /*
   GEmat<T> operator*(GEmat<T> & m) {
     if (_cols_ != m._rows_) {
       throw ; // TODO
@@ -212,6 +210,7 @@ public:
     }
     return ans;
   }
+  */
   GEmat<T> copy() {
     return MatCopy(*this); // may have trouble
   }
@@ -232,8 +231,41 @@ std::ostream & operator<<(std::ostream & out, GEmat<T> & m){
   return out;
 }
 
+
 template<typename T>
-GEmat<T> GEmultM(GEmat<T> & A, GEmat<T> & B) {
+GEmat<T> MatCopy(GEmat<T> & m) {
+  GEmat<T> ret(m._rows_, m._cols_, false);
+  for (int i = 0; i < m._rows_; i ++) {
+    for (int j = 0; j < m._cols_; j ++) {
+      ret.mat[i][j] = m.mat[i][j];
+    }
+  }
+  return ret;
+}
+template<typename Tt, typename Tf>
+GEmat<Tt> MatElemTypeTrans(GEmat<Tf> & m) {
+  GEmat<Tt> ret(m._rows_, m._cols_, false);
+  for (int i = 0; i < m._rows_; i ++) {
+    for (int j = 0; j < m._cols_; j ++) {
+      ret.mat[i][j] = Tt(m.mat[i][j]);
+    }
+  }
+  return ret;
+}
+
+template<typename T>
+GEmat<T> MatTransp(GEmat<T> & A) {
+  GEmat<T> ret(A._cols_, A._rows_);
+  for (int i = 0; i < A._rows_; i ++) {
+    for (int j = 0; j < A._cols_; j ++) {
+      ret.mat[j][i] = A.mat[i][j];
+    }
+  }
+  return ret;
+}
+
+template<typename T>
+GEmat<T> MatMultM(GEmat<T> & A, GEmat<T> & B) {
 #ifdef NAIVE_VER
     /*
         ans = A * B
@@ -262,54 +294,14 @@ GEmat<T> GEmultM(GEmat<T> & A, GEmat<T> & B) {
 }
 
 template<typename T>
-GEmat<T> MatCopy(GEmat<T> & m) {
-  GEmat<T> ret(m._rows_, m._cols_, false);
-  for (int i = 0; i < m._rows_; i ++) {
-    for (int j = 0; j < m._cols_; j ++) {
-      ret.mat[i][j] = m.mat[i][j];
-    }
-  }
-  return ret;
-}
-template<typename Tt, typename Tf>
-GEmat<Tt> MatElemTypeTrans(GEmat<Tf> & m) {
-  GEmat<Tt> ret(m._rows_, m._cols_, false);
-  for (int i = 0; i < m._rows_; i ++) {
-    for (int j = 0; j < m._cols_; j ++) {
-      ret.mat[i][j] = Tt(m.mat[i][j]);
-    }
-  }
-  return ret;
-}
-
-
-
-
-
-////////////////////////////// useless ////////////////////////
-/*
-template<typename T>
-GEmat<T> GEcopy(GEmat<T> A) {
-  MatShape sp = A.shape();
-  GEmat<T> ans(sp);
-  for (int i = 0; i < sp.first; i ++) {
-    for (int j = 0; j < sp.second; j ++) {
-      ans.mat[i][j] = A.mat[i][j];
-    }
-  }
-  return ans;
-}
-*/
-
-template<typename T>
-GEmat<T> GEmultC(T cst, GEmat<T> & A) {
+GEmat<T> MatMultC(GEmat<T> & A, T cst) {
 #ifdef NAIVE_VER
   /*
     ans = cst * A
     cst is a constant value
     this function do cst * A[i][j] for A[i][j] in A
   */
-  GEmat<T> ans = GEcopy(A);
+  GEmat<T> ans = GEmat<T>(A._rows_, A._cols_, false);
 #ifdef PARALLEL
   #pragma omp parallel
   #pragma omp for  
@@ -325,17 +317,65 @@ GEmat<T> GEmultC(T cst, GEmat<T> & A) {
 #endif
 }
 
-// TODO: check, may have some problem
 template<typename T>
-GEmat<T> GEtransp(GEmat<T> & A) {
-  GEmat<T> ret(A._cols_, A._rows_);
+GEmat<T> MatPlusM(GEmat<T> & A, GEmat<T> & B) {
+  if ((A._rows_ != B._rows_) || (A._cols_ != B._cols_)) {
+    throw ; // TODO
+  }
+  GEmat<T> ans(A._rows_, A._cols_);
   for (int i = 0; i < A._rows_; i ++) {
     for (int j = 0; j < A._cols_; j ++) {
-      ret.mat[j][i] = A.mat[i][j];
+      ans.mat[i][j] = A.mat[i][j] + B.mat[i][j];
     }
   }
-  return ret;
+  return ans;
 }
 
+template<typename T>
+GEmat<T> MatSubtM(GEmat<T> & A, GEmat<T> & B) {
+  if ((A._rows_ != B._rows_) || (A._cols_ != B._cols_)) {
+    throw ; // TODO
+  }
+  GEmat<T> ans(A._rows_, A._cols_);
+  for (int i = 0; i < A._rows_; i ++) {
+    for (int j = 0; j < A._cols_; j ++) {
+      ans.mat[i][j] = A.mat[i][j] - B.mat[i][j];
+    }
+  }
+  return ans;
+}
 
+template<typename T>
+GEmat<T> MatPlusC(GEmat<T> & A, T cst) {
+  GEmat<T> ans(A._rows_, A._cols_);
+  for (int i = 0; i < A._rows_; i ++) {
+    for (int j = 0; j < A._cols_; j ++) {
+      ans.mat[i][j] = A.mat[i][j] + cst;
+    }
+  }
+  return ans;
+}
 
+template<typename T>
+GEmat<T> MatSubtC(GEmat<T> & A, T cst) {
+  GEmat<T> ans(A._rows_, A._cols_);
+  for (int i = 0; i < A._rows_; i ++) {
+    for (int j = 0; j < A._cols_; j ++) {
+      ans.mat[i][j] = A.mat[i][j] - cst;
+    }
+  }
+  return ans;
+}
+
+template<typename T>
+GEmat<T> MatDivC(GEmat<T> & A, T cst) {
+  GEmat<T> ans(A._rows_, A._cols_);
+  for (int i = 0; i < A._rows_; i ++) {
+    for (int j = 0; j < A._cols_; j ++) {
+      ans.mat[i][j] = A.mat[i][j] / cst;
+    }
+  }
+  return ans;
+}
+// namespace end
+}
